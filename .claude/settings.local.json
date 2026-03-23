@@ -1,0 +1,21 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-NetTCPConnection -LocalPort 3000,8001 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_OwningProcess -Force -ErrorAction SilentlyContinue }\")",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_snapshot",
+      "Bash(dir:*)",
+      "Bash(jq:*)",
+      "Bash(npx playwright:*)",
+      "Bash(git:*)",
+      "Bash(gh repo:*)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
